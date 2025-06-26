@@ -3,6 +3,8 @@ const contenedor = document.getElementById("buscados");
 const buscador = document.getElementById("buscador");
 const template = document.getElementById("card-template");
 
+const avatar = document.getElementById('avatar')
+
 let fugitivos = [];
 
 async function obtenerDatos() {
@@ -20,12 +22,16 @@ function renderizarFugitivos(lista) {
   contenedor.innerHTML = "";
   lista.forEach(f => {
     const card = template.content.cloneNode(true);
-    card.querySelector("img").src = `https://i.pravatar.cc/100?u=${f.id}`;
+
+    avatar.src = card(".avatar").src = f.avatar
+   // card.querySelector("img").src = `https://i.pravatar.cc/100?u=${f.id}`;
     card.querySelector("img").alt = f.nombre;
     card.querySelector("h4").textContent = f.nombre;
     card.querySelector(".cargos").textContent = `Cargos: ${f.cargos || "N/A"}`;
     card.querySelector(".pais").textContent = `Nacionalidad: ${f.nacionalidad || "Desconocido"}`;
     card.querySelector(".sexo").textContent = `Sexo: ${f.sexo|| "Desconocido"}`;
+    card.querySelector(".nacimiento").textContent = `Fecha de nacimiento: ${f.nacimiento|| "Desconocido"}`;
+
     
     contenedor.appendChild(card);
   });
