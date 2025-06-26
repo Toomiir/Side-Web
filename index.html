@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INTERPOL - Vigilancia Global</title>
+  <link rel="stylesheet" href="interpol.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!--ESTO NO ME DA TIEMPO A TERMINARLO, NI EN PEDO VOY A AGREGAR-->
+  <header class="header">
+    <div class="nav-container">
+      <img src="images.jpeg" alt="Logo Interpol" class="logo">
+      <nav class="nav">
+        <a href="#">Quiénes somos</a>
+        <a href="#">Delitos</a>
+        <a href="#">Cómo trabajamos</a>
+        <a href="#">Qué puede hacer usted</a>
+        <a href="#">Noticias</a>
+        <a href="#buscados">Personas buscadas</a>
+        <a href="#" class="highlight">Identify Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-full">
+    <div class="hero-overlay">
+      <h1>Record 769 arrests and USD 65 million in illicit pharmaceuticals seized in global bust</h1>
+      <a href="#" class="btn">MÁS INFORMACIÓN</a>
+    </div>
+  </section>
+
+   <!--LAS IMAGENES TAMPOCO-->
+
+  <main class="main-content">
+    <h2 class="section-title">Destacados</h2>
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <img src="dest3.jpeg" alt="">
+        <h4>Noticias</h4>
+        <p>INTERPOL lidera acción global con 40 países</p>
+      </div>
+      <div class="highlight-card">
+        <img src="dest2.jpeg" alt="">
+        <h4>Noticias</h4>
+        <p>20.000 direcciones IP maliciosas detectadas</p>
+      </div>
+      <div class="highlight-card">
+        <img src="dest1.jpeg" alt="">
+        <h4>Noticias</h4>
+        <p>Veinte personas detenidas en operación conjunta</p>
+      </div>
+    </div>
+  </main>
+
+  <!--FALTA UN BOTON DE VER MAS-->
+  <section class="search-section" id="busqueda">
+    <h3>Personas buscadas</h3>
+    <input type="text" id="buscador" placeholder="Buscar por nombre, delito, país...">
+    <div class="grid" id="buscados"></div>
+  </section>
+
+  <template id="card-template">
+    <div class="card">
+      <img src="" alt="Foto del criminal">
+      <h4></h4>
+      <p class="cargos"></p>
+      <p class="pais"></p>
+      <p class="sexo"></p>
+    </div>
+  </template>
+
+  <footer class="footer">
+    <p>&copy; 2025 INTERPOL - Sistema de Vigilancia Internacional</p>
+  </footer>
+
+  <script src="interpol.js"></script>
+</body>
+</html>
