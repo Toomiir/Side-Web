@@ -23,7 +23,8 @@ function renderizarFugitivos(lista) {
   lista.forEach(f => {
     const card = template.content.cloneNode(true);
 
-    avatar.src = card(".avatar").src = f.avatar
+     const img = card.querySelector("img");
+    img.src = f.avatar && f.avatar.startsWith("http") ? f.avatar : `https://i.pravatar.cc/100?u=${f.id}`;
    // card.querySelector("img").src = `https://i.pravatar.cc/100?u=${f.id}`;
     card.querySelector("img").alt = f.nombre;
     card.querySelector("h4").textContent = f.nombre;
